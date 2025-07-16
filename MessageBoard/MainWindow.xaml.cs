@@ -20,5 +20,14 @@ namespace MessageBoard
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var board = this.FindName("board") as TextBox;
+            if (board != null)
+            {
+                board.Text = string.Empty;
+            }
+        }
     }
 }

@@ -21,5 +21,15 @@
             <RowDefinition Height="4"/>
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
+        <TextBlock Text="请选择您的部门并留言： " Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"></TextBlock>
+        <ComboBox x:Name="DepartmentComboBox" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="4" VerticalAlignment="Center">
+            <ComboBoxItem Content="技术部"/>
+            <ComboBoxItem Content="市场部"/>
+            <ComboBoxItem Content="财务部"/>
+            <ComboBoxItem Content="人事部"/>
+        </ComboBox>
+        <TextBox x:Name="board" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" BorderBrush="Black" ></TextBox>
+        <Button Content="提交" Grid.Column="2" Grid.Row="4" ></Button>
+        <Button Content="清除" Grid.Column="4" Grid.Row="4" Click="Button_Click"></Button>
     </Grid>
 </Window>
