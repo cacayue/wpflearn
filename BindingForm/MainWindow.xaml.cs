@@ -22,15 +22,18 @@ namespace BindingForm
         {
             InitializeComponent();
 
-            stu = new Student();
+            //var binding = new Binding()
+            //{
+            //    Source = stu,
+            //    Path = new PropertyPath("Name"),
+            //};
 
-            var binding = new Binding()
+            //BindingOperations.SetBinding(this.textBoxName, TextBox.TextProperty, binding);
+
+            this.textBoxName.SetBinding(TextBox.TextProperty, new Binding("Name")
             {
-                Source = stu,
-                Path = new PropertyPath("Name"),
-            };
-
-            BindingOperations.SetBinding(this.textBoxName, TextBox.TextProperty, binding);
+                Source = stu = new Student()
+            });
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
