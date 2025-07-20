@@ -30,7 +30,7 @@ namespace BindingForm
 
             //BindingOperations.SetBinding(this.textBoxName, TextBox.TextProperty, binding);
 
-            this.textBoxName.SetBinding(TextBox.TextProperty, new Binding("Name")
+            this.textBoxName1.SetBinding(TextBox.TextProperty, new Binding("Name")
             {
                 Source = stu = new Student()
             });
